@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B6F9BF392C11B05E0055DE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */; };
 		B6F9BF3B2C11B05E0055DE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */; };
-		B6F9BF3D2C11B05E0055DE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF3C2C11B05E0055DE85 /* ViewController.swift */; };
-		B6F9BF402C11B05E0055DE85 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B6F9BF3F2C11B05E0055DE85 /* Base */; };
 		B6F9BF422C11B05F0055DE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F9BF412C11B05F0055DE85 /* Assets.xcassets */; };
 		B6F9BF452C11B05F0055DE85 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B6F9BF442C11B05F0055DE85 /* Base */; };
+		B6F9BF512C11C3C80055DE85 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF502C11C3C80055DE85 /* UIViewController+Preview.swift */; };
+		B6F9BF552C11C56E0055DE85 /* DestiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF542C11C56E0055DE85 /* DestiniViewController.swift */; };
+		B6F9BF582C11CB210055DE85 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF572C11CB210055DE85 /* Images.swift */; };
+		B6F9BF5A2C11E6550055DE85 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF592C11E6550055DE85 /* Sizes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6F9BF352C11B05E0055DE85 /* Destini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Destini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6F9BF3C2C11B05E0055DE85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B6F9BF3F2C11B05E0055DE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6F9BF412C11B05F0055DE85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6F9BF442C11B05F0055DE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F9BF462C11B05F0055DE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6F9BF502C11C3C80055DE85 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
+		B6F9BF542C11C56E0055DE85 /* DestiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestiniViewController.swift; sourceTree = "<group>"; };
+		B6F9BF572C11CB210055DE85 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		B6F9BF592C11E6550055DE85 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		B6F9BF372C11B05E0055DE85 /* Destini */ = {
 			isa = PBXGroup;
 			children = (
-				B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */,
-				B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */,
-				B6F9BF3C2C11B05E0055DE85 /* ViewController.swift */,
-				B6F9BF3E2C11B05E0055DE85 /* Main.storyboard */,
-				B6F9BF412C11B05F0055DE85 /* Assets.xcassets */,
-				B6F9BF432C11B05F0055DE85 /* LaunchScreen.storyboard */,
+				B6F9BF4C2C11B2040055DE85 /* App */,
+				B6F9BF4D2C11C2CD0055DE85 /* Resources */,
+				B6F9BF4E2C11C3160055DE85 /* ViewControllers */,
+				B6F9BF4F2C11C36B0055DE85 /* Extensions */,
+				B6F9BF562C11CB0A0055DE85 /* Theme */,
 				B6F9BF462C11B05F0055DE85 /* Info.plist */,
 			);
 			path = Destini;
+			sourceTree = "<group>";
+		};
+		B6F9BF4C2C11B2040055DE85 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */,
+				B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B6F9BF4D2C11C2CD0055DE85 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9BF412C11B05F0055DE85 /* Assets.xcassets */,
+				B6F9BF432C11B05F0055DE85 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B6F9BF4E2C11C3160055DE85 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9BF542C11C56E0055DE85 /* DestiniViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6F9BF4F2C11C36B0055DE85 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9BF502C11C3C80055DE85 /* UIViewController+Preview.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6F9BF562C11CB0A0055DE85 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9BF572C11CB210055DE85 /* Images.swift */,
+				B6F9BF592C11E6550055DE85 /* Sizes.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +173,6 @@
 			files = (
 				B6F9BF422C11B05F0055DE85 /* Assets.xcassets in Resources */,
 				B6F9BF452C11B05F0055DE85 /* Base in Resources */,
-				B6F9BF402C11B05E0055DE85 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F9BF3D2C11B05E0055DE85 /* ViewController.swift in Sources */,
+				B6F9BF5A2C11E6550055DE85 /* Sizes.swift in Sources */,
+				B6F9BF512C11C3C80055DE85 /* UIViewController+Preview.swift in Sources */,
+				B6F9BF552C11C56E0055DE85 /* DestiniViewController.swift in Sources */,
 				B6F9BF392C11B05E0055DE85 /* AppDelegate.swift in Sources */,
 				B6F9BF3B2C11B05E0055DE85 /* SceneDelegate.swift in Sources */,
+				B6F9BF582C11CB210055DE85 /* Images.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6F9BF3E2C11B05E0055DE85 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6F9BF3F2C11B05E0055DE85 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6F9BF432C11B05F0055DE85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,9 +336,8 @@
 				INFOPLIST_FILE = Destini/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +345,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DmitriyLubov.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,9 +366,8 @@
 				INFOPLIST_FILE = Destini/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +375,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DmitriyLubov.Destini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
