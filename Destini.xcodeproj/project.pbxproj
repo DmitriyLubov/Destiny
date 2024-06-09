@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6E410462C158A2500D485AB /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E410452C158A2400D485AB /* Story.swift */; };
+		B6E410482C158B1400D485AB /* DestinyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E410472C158B1400D485AB /* DestinyManager.swift */; };
+		B6E4104B2C158CFE00D485AB /* StoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E4104A2C158CFE00D485AB /* StoryRepository.swift */; };
 		B6F9BF392C11B05E0055DE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */; };
 		B6F9BF3B2C11B05E0055DE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */; };
 		B6F9BF422C11B05F0055DE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F9BF412C11B05F0055DE85 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6E410452C158A2400D485AB /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		B6E410472C158B1400D485AB /* DestinyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinyManager.swift; sourceTree = "<group>"; };
+		B6E4104A2C158CFE00D485AB /* StoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRepository.swift; sourceTree = "<group>"; };
 		B6F9BF352C11B05E0055DE85 /* Destini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Destini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F9BF382C11B05E0055DE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6F9BF3A2C11B05E0055DE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6E410442C1589D400D485AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6E410452C158A2400D485AB /* Story.swift */,
+				B6E410472C158B1400D485AB /* DestinyManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6E410492C158CAC00D485AB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B6E4104A2C158CFE00D485AB /* StoryRepository.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		B6F9BF2C2C11B05E0055DE85 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +85,8 @@
 			children = (
 				B6F9BF4C2C11B2040055DE85 /* App */,
 				B6F9BF4D2C11C2CD0055DE85 /* Resources */,
+				B6E410492C158CAC00D485AB /* Entities */,
+				B6E410442C1589D400D485AB /* Models */,
 				B6F9BF4E2C11C3160055DE85 /* ViewControllers */,
 				B6F9BF4F2C11C36B0055DE85 /* Extensions */,
 				B6F9BF562C11CB0A0055DE85 /* Theme */,
@@ -185,10 +210,13 @@
 			files = (
 				B6F9BF5A2C11E6550055DE85 /* Sizes.swift in Sources */,
 				B6F9BF512C11C3C80055DE85 /* UIViewController+Preview.swift in Sources */,
+				B6E410482C158B1400D485AB /* DestinyManager.swift in Sources */,
 				B6F9BF552C11C56E0055DE85 /* DestiniViewController.swift in Sources */,
 				B6F9BF392C11B05E0055DE85 /* AppDelegate.swift in Sources */,
 				B6F9BF3B2C11B05E0055DE85 /* SceneDelegate.swift in Sources */,
 				B6F9BF582C11CB210055DE85 /* Images.swift in Sources */,
+				B6E410462C158A2500D485AB /* Story.swift in Sources */,
+				B6E4104B2C158CFE00D485AB /* StoryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

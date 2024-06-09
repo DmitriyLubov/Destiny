@@ -11,13 +11,11 @@ import SwiftUI
 #endif
 
 final class DestiniViewController: UIViewController {
-	
-	// MARK: - Outlets
-	
-	// MARK: - Public properties
-	
+
 	// MARK: - Dependencies
-	
+
+	private var destinyManager: DestinyManager
+
 	// MARK: - Private properties
 
 	private lazy var mainBackgroundImage: UIImageView = makeImage()
@@ -28,12 +26,22 @@ final class DestiniViewController: UIViewController {
 	private lazy var choiceTwoButton: UIButton = makeButton()
 
 	// MARK: - Initialization
+
+	init(destinyManager: DestinyManager) {
+		self.destinyManager = destinyManager
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 	
 	// MARK: - Lifecycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		updateUI()
 	}
 
 	override func viewDidLayoutSubviews() {
@@ -41,15 +49,34 @@ final class DestiniViewController: UIViewController {
 		layout()
 	}
 
-	// MARK: - Public methods
-	
 	// MARK: - Private methods
+
+	private func updateUI() {
+		storyLabel.text = destinyManager.getContent()
+
+		let choices = destinyManager.getChoices()
+		updateButtonTitle(choices[0], for: choiceOneButton)
+		updateButtonTitle(choices[1], for: choiceTwoButton)
+	}
+
+	private func updateButtonTitle(_ title: String, for button: UIButton) {
+		button.configuration?.attributedTitle = AttributedString(title)
+		button.configuration?.attributedTitle?.font = .preferredFont(forTextStyle: .title1)
+	}
 }
 
 // MARK: - Actions
 
 private extension DestiniViewController {
-	
+
+	func choiceMade() -> UIAction {
+		UIAction { [weak self] action in
+			guard let sender = action.sender as? UIButton, let choice = sender.configuration?.title else { return }
+
+			self?.destinyManager.nextStory(choice)
+			self?.updateUI()
+		}
+	}
 }
 
 // MARK: - Setup UI
@@ -58,6 +85,7 @@ private extension DestiniViewController {
 
 	func setupUI() {
 		addSubviews()
+		addActions()
 
 		setupChoiceOneButton()
 		setupChoiceTwoButton()
@@ -88,6 +116,7 @@ private extension DestiniViewController {
 
 		element.font = .preferredFont(forTextStyle: .title1)
 		element.textColor = .white
+		element.numberOfLines = 0
 		element.translatesAutoresizingMaskIntoConstraints = false
 
 		return element
@@ -116,6 +145,11 @@ private extension DestiniViewController {
 		mainStackView.addArrangedSubview(storyLabel)
 		mainStackView.addArrangedSubview(choiceOneButton)
 		mainStackView.addArrangedSubview(choiceTwoButton)
+	}
+
+	func addActions() {
+		choiceOneButton.addAction(choiceMade(), for: .touchUpInside)
+		choiceTwoButton.addAction(choiceMade(), for: .touchUpInside)
 	}
 
 	func setupChoiceOneButton() {
@@ -153,7 +187,7 @@ private extension DestiniViewController {
 struct ViewControllerProvider: PreviewProvider {
 	static var previews: some View {
 		Group {
-			DestiniViewController().previw()
+			DestiniViewController(destinyManager: DestinyManager(stories: StoryRepository().getStories())).previw()
 		}
 	}
 }

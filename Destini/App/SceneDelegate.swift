@@ -15,10 +15,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 
 		let window = UIWindow(windowScene: windowScene)
-		window.rootViewController = DestiniViewController()
+		window.rootViewController = DestiniViewController(destinyManager: buildDestinyManager())
 		window.makeKeyAndVisible()
 
 		self.window = window
 	}
 }
 
+private extension SceneDelegate {
+
+	func buildDestinyManager() -> DestinyManager {
+		let repository: IStoryRepository = StoryRepository()
+		let manager = DestinyManager(stories: repository.getStories())
+
+		return manager
+	}
+}
